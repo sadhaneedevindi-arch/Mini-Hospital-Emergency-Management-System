@@ -33,4 +33,22 @@ public class EmergencyQueue {
             rear = newNode;
         }
     }
+
+    public Patient dequeue() {
+
+        if (front == null) {
+            System.out.println("Emergency queue is empty.");
+            return null;
+        }
+
+        Patient patient = front.patient;
+
+        front = front.next;
+
+        if (front == null) {
+            rear = null;
+        }
+
+        return patient;
+    }
 }
