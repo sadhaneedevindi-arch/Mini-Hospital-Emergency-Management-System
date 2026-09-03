@@ -120,4 +120,21 @@ public class PatientBST {
 
         return root;
     }
+
+    public void inOrder() {
+        inOrderRecursive(root);
+    }
+
+    private void inOrderRecursive(Node root) {
+
+        if (root != null) {
+
+            inOrderRecursive(root.left);
+
+            root.patient.displayPatient();
+            System.out.println("--------------------");
+
+            inOrderRecursive(root.right);
+        }
+    }
 }

@@ -28,28 +28,30 @@ public class Main {
             "Injury"
         );
 
+        Patient patient4 = new Patient(
+            101,
+            "Amal",
+            30,
+            "0766666666",
+            "Cold"
+        );
+
+        Patient patient5 = new Patient(
+            108,
+            "Saman",
+            40,
+            "0788888888",
+            "Back Pain"
+        );
+
         bst.insert(patient1);
         bst.insert(patient2);
         bst.insert(patient3);
+        bst.insert(patient4);
+        bst.insert(patient5);
 
-        System.out.println("---- BEFORE DELETE ----");
+        System.out.println("===== PATIENTS IN ASCENDING ORDER =====");
 
-        Patient foundPatient = bst.search(102);
-
-        if (foundPatient != null) {
-            foundPatient.displayPatient();
-        }
-
-        bst.delete(102);
-
-        System.out.println("\n---- AFTER DELETE ----");
-
-        foundPatient = bst.search(102);
-
-        if (foundPatient != null) {
-            foundPatient.displayPatient();
-        } else {
-            System.out.println("Patient 102 was deleted successfully.");
-        }
+        bst.inOrder();
     }
 }
