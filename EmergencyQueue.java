@@ -18,4 +18,19 @@ public class EmergencyQueue {
         front = null;
         rear = null;
     }
+
+    public void enqueue(Patient patient) {
+
+        Node newNode = new Node(patient);
+
+        if (rear == null) {
+            front = newNode;
+            rear = newNode;
+        }
+
+        else {
+            rear.next = newNode;
+            rear = newNode;
+        }
+    }
 }

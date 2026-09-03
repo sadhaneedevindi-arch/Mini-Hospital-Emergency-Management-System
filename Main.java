@@ -2,10 +2,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        PatientBST bst = new PatientBST();
+        // Create emergency queue
+        EmergencyQueue queue = new EmergencyQueue();
 
+        // Create patients
         Patient patient1 = new Patient(
-            105,
+            101,
             "Kamal",
             35,
             "0771234567",
@@ -21,37 +23,18 @@ public class Main {
         );
 
         Patient patient3 = new Patient(
-            110,
+            103,
             "Sunil",
             45,
             "0755555555",
             "Injury"
         );
 
-        Patient patient4 = new Patient(
-            101,
-            "Amal",
-            30,
-            "0766666666",
-            "Cold"
-        );
+        // Add patients to the queue
+        queue.enqueue(patient1);
+        queue.enqueue(patient2);
+        queue.enqueue(patient3);
 
-        Patient patient5 = new Patient(
-            108,
-            "Saman",
-            40,
-            "0788888888",
-            "Back Pain"
-        );
-
-        bst.insert(patient1);
-        bst.insert(patient2);
-        bst.insert(patient3);
-        bst.insert(patient4);
-        bst.insert(patient5);
-
-        System.out.println("===== PATIENTS IN ASCENDING ORDER =====");
-
-        bst.inOrder();
+        System.out.println("Patients added to emergency queue successfully.");
     }
 }
