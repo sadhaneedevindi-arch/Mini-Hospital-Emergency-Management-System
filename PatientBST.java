@@ -35,4 +35,32 @@ public class PatientBST {
 
         return root;
     }
+
+    public Patient search(int patientId) {
+
+        Node result = searchRecursive(root, patientId);
+
+        if (result != null) {
+            return result.patient;
+        }
+
+        return null;
+    }
+
+    private Node searchRecursive(Node root, int patientId) {
+
+        if (root == null) {
+            return null;
+        }
+
+        if (root.patient.patientId == patientId) {
+            return root;
+        }
+
+        if (patientId < root.patient.patientId) {
+            return searchRecursive(root.left, patientId);
+        }
+
+        return searchRecursive(root.right, patientId);
+    }
 }
