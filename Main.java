@@ -2,10 +2,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // Create BST
         PatientBST bst = new PatientBST();
 
-        // Create patients
         Patient patient1 = new Patient(
             105,
             "Kamal",
@@ -30,23 +28,28 @@ public class Main {
             "Injury"
         );
 
-        // Insert patients
         bst.insert(patient1);
         bst.insert(patient2);
         bst.insert(patient3);
 
-        // Search for patient
-        System.out.println("---- SEARCH PATIENT ----");
+        System.out.println("---- BEFORE DELETE ----");
 
-        int searchId = 102;
-
-        Patient foundPatient = bst.search(searchId);
+        Patient foundPatient = bst.search(102);
 
         if (foundPatient != null) {
-            System.out.println("Patient found!");
+            foundPatient.displayPatient();
+        }
+
+        bst.delete(102);
+
+        System.out.println("\n---- AFTER DELETE ----");
+
+        foundPatient = bst.search(102);
+
+        if (foundPatient != null) {
             foundPatient.displayPatient();
         } else {
-            System.out.println("Patient not found.");
+            System.out.println("Patient 102 was deleted successfully.");
         }
     }
 }
