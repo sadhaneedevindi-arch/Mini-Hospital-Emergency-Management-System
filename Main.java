@@ -23,12 +23,6 @@ public class Main {
         queue.enqueue(patient2);
         queue.enqueue(patient3);
 
-        System.out.println("---- NEXT PATIENT FOR TREATMENT ----");
-
-        Patient treatedPatient = queue.dequeue();
-
-        if (treatedPatient != null) {
-            treatedPatient.displayPatient();
-        }
+        queue.displayQueue();
     }
 }

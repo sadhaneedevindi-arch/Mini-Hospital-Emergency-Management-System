@@ -51,4 +51,24 @@ public class EmergencyQueue {
 
         return patient;
     }
+
+    public void displayQueue() {
+
+        if (front == null) {
+            System.out.println("Emergency queue is empty.");
+            return;
+        }
+
+        Node current = front;
+
+        System.out.println("---- PATIENTS WAITING IN EMERGENCY QUEUE ----");
+
+        while (current != null) {
+
+            current.patient.displayPatient();
+            System.out.println("--------------------");
+
+            current = current.next;
+        }
+    }
 }
