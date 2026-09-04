@@ -38,4 +38,25 @@ public class TreatmentStack {
 
         return record;
     }
+
+    public void displayStack() {
+
+        if (top == null) {
+            System.out.println("Treatment history stack is empty.");
+            return;
+        }
+
+        Node current = top;
+
+        System.out.println("---- TREATMENT HISTORY ----");
+
+        while (current != null) {
+
+            current.record.displayTreatment();
+
+            System.out.println("--------------------");
+
+            current = current.next;
+        }
+    }
 }
