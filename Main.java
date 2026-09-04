@@ -28,8 +28,6 @@ public class Main {
             "Wound dressing"
         ));
 
-        System.out.println("Removing Visit ID 2.");
-
-        history.removeVisit(2);
+        history.displayVisits();
     }
 }

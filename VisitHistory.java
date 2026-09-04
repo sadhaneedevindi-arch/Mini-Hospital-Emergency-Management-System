@@ -82,4 +82,25 @@ public class VisitHistory {
             System.out.println("Visit not found.");
         }
     }
+
+    public void displayVisits() {
+
+        if (head == null) {
+            System.out.println("Visit history is empty.");
+            return;
+        }
+
+        Node current = head;
+
+        System.out.println("---- PATIENT VISIT HISTORY ----");
+
+        while (current != null) {
+
+            current.visit.displayVisit();
+
+            System.out.println("--------------------");
+
+            current = current.next;
+        }
+    }
 }
