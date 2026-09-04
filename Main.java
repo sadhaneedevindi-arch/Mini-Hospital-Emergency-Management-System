@@ -22,7 +22,7 @@ public class Main {
         queue.enqueue(patient1);
         queue.enqueue(patient2);
         queue.enqueue(patient3);
-
+        
         queue.displayQueue();
     }
 }
