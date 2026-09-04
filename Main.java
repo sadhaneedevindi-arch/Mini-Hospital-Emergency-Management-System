@@ -20,15 +20,16 @@ public class Main {
             "Pain relief"
         ));
 
-        System.out.println("---- SEARCH VISIT ----");
+        history.addVisit(new Visit(
+            3,
+            "2026-09-01",
+            "Dr. Fernando",
+            "Injury",
+            "Wound dressing"
+        ));
 
-        Visit found = history.searchVisit(2);
+        System.out.println("Removing Visit ID 2.");
 
-        if (found != null) {
-            System.out.println("Visit found!");
-            found.displayVisit();
-        } else {
-            System.out.println("Visit not found.");
-        }
+        history.removeVisit(2);
     }
 }

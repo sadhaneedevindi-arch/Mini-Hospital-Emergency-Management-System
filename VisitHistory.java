@@ -50,4 +50,36 @@ public class VisitHistory {
 
         return null;
     }
+
+    public void removeVisit(int visitId) {
+
+        if (head == null) {
+            System.out.println("Visit history is empty.");
+            return;
+        }
+
+        if (head.visit.visitId == visitId) {
+            head = head.next;
+            System.out.println("Visit removed successfully.");
+            return;
+        }
+
+        Node current = head;
+
+        while (current.next != null &&
+            current.next.visit.visitId != visitId) {
+
+                current = current.next;
+        }
+
+        if (current.next != null) {
+
+            current.next = current.next.next;
+
+            System.out.println("Visit removed successfully.");
+        } else {
+
+            System.out.println("Visit not found.");
+        }
+    }
 }
