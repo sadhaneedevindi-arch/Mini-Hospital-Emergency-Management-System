@@ -16,4 +16,12 @@ public class TreatmentStack {
     public TreatmentStack() {
         top = null;
     }
+
+    public void push(TreatmentRecord record) {
+
+        Node newNode = new Node(record);
+
+        newNode.next = top;
+        top = newNode;
+    }
 }
