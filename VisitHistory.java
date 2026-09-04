@@ -16,4 +16,22 @@ public class VisitHistory {
     public VisitHistory() {
         head = null;
     }
+
+    public void addVisit(Visit visit) {
+
+        Node newNode = new Node(visit);
+
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+
+        Node current = head;
+
+        while (current.next != null) {
+            current = current.next;
+        }
+
+        current.next = newNode;
+    }
 }

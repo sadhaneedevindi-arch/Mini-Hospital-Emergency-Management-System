@@ -2,16 +2,32 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Visit visit = new Visit(
+        VisitHistory history = new VisitHistory();
+
+        history.addVisit(new Visit(
             1,
-            "2026-09-01",
+            "2026-08-01",
             "Dr. Silva",
             "Fever",
             "Medication"
-        );
+        ));
 
-        System.out.println("---- VISIT INFORMATION ----");
+        history.addVisit(new Visit(
+            2,
+            "2026-08-15",
+            "Dr. Perera",
+            "Headache",
+            "Pain relief"
+        ));
 
-        visit.displayVisit();
+        history.addVisit(new Visit(
+            3,
+            "2026-09-01",
+            "Dr. Fernando",
+            "Injury",
+            "Wound dressing"
+        ));
+
+        System.out.println("Visits added successfully.");
     }
 }
