@@ -2,11 +2,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        TreatmentStack stack = new TreatmentStack();
+        Visit visit = new Visit(
+            1,
+            "2026-09-01",
+            "Dr. Silva",
+            "Fever",
+            "Medication"
+        );
 
-        System.out.println("---- EMPTY STACK TEST ----");
+        System.out.println("---- VISIT INFORMATION ----");
 
-        stack.pop();
-        stack.displayStack();
+        visit.displayVisit();
     }
 }
