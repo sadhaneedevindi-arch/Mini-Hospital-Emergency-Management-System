@@ -34,4 +34,20 @@ public class VisitHistory {
 
         current.next = newNode;
     }
+
+    public Visit searchVisit(int visitId) {
+
+        Node current = head;
+
+        while (current != null) {
+
+            if (current.visit.visitId == visitId) {
+                return current.visit;
+            }
+
+            current = current.next;
+        }
+
+        return null;
+    }
 }
