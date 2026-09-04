@@ -25,11 +25,17 @@ public class Main {
             "Wound treatment"
         );
 
-        // Add treatments to stack
         stack.push(treatment1);
         stack.push(treatment2);
         stack.push(treatment3);
 
-        System.out.println("Treatments added to stack successfully.");
+        System.out.println("---- POP TEST ----");
+
+        TreatmentRecord removed = stack.pop();
+
+        if (removed != null) {
+            System.out.println("Most recent treatment removed:");
+            removed.displayTreatment();
+        }
     }
 }

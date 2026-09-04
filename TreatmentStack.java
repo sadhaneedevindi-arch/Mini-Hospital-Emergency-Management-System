@@ -24,4 +24,18 @@ public class TreatmentStack {
         newNode.next = top;
         top = newNode;
     }
+
+    public TreatmentRecord pop() {
+
+        if (top == null) {
+            System.out.println("Treatment history stack is empty.");
+            return null;
+        }
+
+        TreatmentRecord record = top.record;
+
+        top = top.next;
+
+        return record;
+    }
 }
