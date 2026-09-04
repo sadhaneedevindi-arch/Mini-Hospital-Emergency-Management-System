@@ -4,27 +4,9 @@ public class Main {
 
         TreatmentStack stack = new TreatmentStack();
 
-        stack.push(new TreatmentRecord(
-            1,
-            101,
-            "Dr. Silva",
-            "Fever medication"
-        ));
+        System.out.println("---- EMPTY STACK TEST ----");
 
-        stack.push(new TreatmentRecord(
-            2,
-            102,
-            "Dr. Perera",
-            "Headache medication"
-        ));
-
-        stack.push(new TreatmentRecord(
-            3,
-            103,
-            "Dr. Fernando",
-            "Wound treatment"
-        ));
-
+        stack.pop();
         stack.displayStack();
     }
 }
